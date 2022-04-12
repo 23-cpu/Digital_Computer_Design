@@ -6,7 +6,11 @@ entity sillyfunction is
          y:    out STD_LOGIC
     );
 
+    end;
+
 architecture synth of sillyfunction is 
 begin
 
     y <= (not a and b and not c ) or (a and not b and not c) or (a and not b and c);
+
+end; 
