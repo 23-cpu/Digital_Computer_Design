@@ -1,16 +1,16 @@
-library library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 -- The my_circuit example in free range vhdl 
 
-entiity my_circuit is port(
+entity my_circuit is port(
 
     A_1, A_2 : in std_logic;
     B_1, B_2 : in std_logic;
 
     D_1 : in std_logic;
-    E_out : in std_logic
+    E_out : out std_logic
 
 );
 end my_circuit;
