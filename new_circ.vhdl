@@ -16,3 +16,4 @@ entity mux_4 is port(
 
 );
 
+end mux_4; 
