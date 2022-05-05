@@ -1,7 +1,7 @@
 -- Create a simple nand gate
 -- An application of concurrent signal assignment
 
-use library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
@@ -22,7 +22,7 @@ end my_nand;
 architecture nand_arch of my_nand is 
 
 begin
-    Y_in <= not( A_in and B_in and C_in);
+    Y_out <= not( A_in and B_in and C_in);
 end nand_arch;
 
 
