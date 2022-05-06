@@ -1,1 +1,2 @@
-# Digital Computer Design Study Materials
+# Digital Computer Design Pracices
+# For personal studies
