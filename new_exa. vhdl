@@ -1,0 +1,40 @@
+-- This is another example to consider for the process statements 
+
+-- library depenndencies
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+--entity declarations
+ENTITY my_system IS PORT (
+
+    A, B, C : IN STD_LOGIC;
+    F, Q : IN STD_LOGIC
+
+);
+END my_system;
+
+-- Architecture Deginition
+
+ARCHITECTURE sys_arch OF my_system IS
+    SIGNAL A1 : STD_LOGIC;
+
+BEGIN
+    some_proc : PROCESS (A, B) IS
+        VARIABLE A, B : INTEGER;
+
+    BEGIN
+        a = 34;
+        b = 64
+        A1 <= A AND B AND C;
+
+        IF a > b
+            F <= A1 OR B
+        END IF;
+        
+    END PROCESS some_proc;
+
+        -- we are outside the process body
+
+END behav;

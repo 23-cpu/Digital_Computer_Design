@@ -1,16 +1,17 @@
-library IEEE; 
-use IEEE.STD_LOGIC_1164.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
-entity sillyfunction is
-    port(a,b,c: in STD_LOGIC;
-         y:    out STD_LOGIC
+ENTITY sillyfunction IS
+    PORT (
+        a, b, c : IN STD_LOGIC;
+        y : OUT STD_LOGIC
     );
 
-    end;
+END;
 
-architecture synth of sillyfunction is 
-begin
+ARCHITECTURE synth OF sillyfunction IS
+BEGIN
 
-    y <= (not a and b and not c ) or (a and not b and not c) or (a and not b and c);
+    y <= (NOT a AND b AND NOT c) OR (a AND NOT b AND NOT c) OR (a AND NOT b AND c);
 
-end; 
+END;

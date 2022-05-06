@@ -20,15 +20,15 @@ end sys1;
 
 -- Black box 2
 
-entity sys2 is port(
-    input_w : in std_logic;
-    a_data :  in std_logic_vector(0 to 7);
-    b_data :  in std_logic_vector(0 to 7);
-    clk : in;
+--entity sys2 is port(
+    --input_w : in std_logic;
+    --a_data :  in std_logic_vector(0 to 7);
+    --b_data :  in std_logic_vector(0 to 7);
+    --clk : in;
 
-    dat_4 : out std_logic_vector(0 to 7);
-    dat_5 : out std_logic_vector(0 to 2)
+    --dat_4 : out std_logic_vector(0 to 7);
+    --dat_5 : out std_logic_vector(0 to 2)
 
-);
+--);
 
-end sys2;
+--end sys2;

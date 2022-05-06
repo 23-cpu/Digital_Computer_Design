@@ -11,8 +11,8 @@ entity mux_4 is port(
     c_data: in std_logic_vector(0 to 7);
     d_data: in std_logic_vector(0 to 7);
 
-    sel_0, sel_1 : in std_logic
-    data_out :  out std_logic_vector(0 to 7);
+    sel_0, sel_1 : in std_logic;
+    data_out :  out std_logic_vector(0 to 7)
 
 );
 

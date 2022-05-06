@@ -1,30 +1,55 @@
 -- A new mux i created for fun 
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
 
 -- Entity Declaration
-entity mux_4 is port(
+ENTITY mux_4 IS PORT (
 
-    d0 , d1 , d2 , d3  : in std_logic;
-    sel_2 : in std_logic_vector(0 to 1);
-    d_out : out std_logic
+    d0, d1, d2, d3 : IN STD_LOGIC;
+    sel_2 : IN STD_LOGIC_VECTOR(0 TO 1);
+    d_out : OUT STD_LOGIC
 
 );
-end mux_4;
+END mux_4;
 
--- Architecture definition 
+-- Architecture definition , conditional
 
-architecture mux_archs of mux_4 is 
-    begin 
-    
-    d_out <= d3 when (sel_2 = "11") else 
-             d2 when (sel_2 = "10") else
-             d1 when (sel_2 = "01") else
-             d0 when (sel_2 = "00") else
-             '0';
+ARCHITECTURE mux_archs OF mux_4 IS
+BEGIN
 
-end mux_arhs;
+    d_out <= d3 WHEN (sel_2 = "11") ELSE
+        d2 WHEN (sel_2 = "10") ELSE
+        d1 WHEN (sel_2 = "01") ELSE
+        d0 WHEN (sel_2 = "00") ELSE
+        '0';
 
+END mux_archs;
 
+-- achitecture 2 , conditional with bundled select signal; approach 
+
+ARCHITECTURE mux_arch2 OF mux_4 IS
+BEGIN
+
+    d_out <= d3 WHEN (sel_2(1) = '1' AND sel_2(0) = '1') ELSE
+        d2 WHEN (sel_2(1) = '1' AND sel_2(0) = '0') ELSE
+        d1 WHEN (sel_2(1) = '0' AND sel_2(0) = '1') ELSE
+        d0 WHEN (sel_2(1) = '0' AND sel_2(0) = '0') ELSE
+        '0';
+
+END mux_arch2;
+
+--architecture 3 , select to signal approach
+
+ARCHITECTURE mux_arch3 OF mux_4 IS
+BEGIN
+
+    WITH sel_2 SELECT
+        d_out <= d3 WHEN "11",
+        d2 WHEN "10",
+        d1 WHEN "01",
+        d0 WHEN "00",
+        '0' WHEN OTHERS;
+
+END mux_arch3;
