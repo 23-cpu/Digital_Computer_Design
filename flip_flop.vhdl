@@ -1,8 +1,8 @@
 -- This simple example illustrate the design of a flip flop in vhdl
 
---------------------------
---Model of a simple vhdl--
---------------------------
+------------------------------------
+--Model of a simple flip flop vhdl--
+------------------------------------
 
 -- Library dependencies
 LIBRARY IEEE;
